@@ -8,7 +8,10 @@
   
   <script setup lang="ts">
   import { ref, computed, watch } from 'vue';
-  
+    definePageMeta({
+        layout: "default",
+    });
+
   </script>
   
   <style scoped>

@@ -1,37 +1,35 @@
 <template>
-    <div>
-      <div class="grid grid-cols-5 gap-4">
+    <div class="grid grid-cols-5 gap-4">
         <div class="col-span-4">
-          <div class="grid grid-cols-7 grid-rows-2 gap-4">
-            <div class="col-span-7 h-[500px]">
-              <MainProduct :widget="mock"></MainProduct>
+            <div class="grid grid-cols-7 grid-rows-2 gap-4">
+                <div class="col-span-7 h-[500px]">
+                <MainProduct :widget="mock"></MainProduct>
+                </div>
+                <div class="col-span-2 row-start-2 h-[250px]">
+                <MoreProducts :widget="mock"></MoreProducts>
+                </div>
+                <div class="col-span-2 col-start-3 row-start-2 h-[250px]">
+                <Downloads :widget="mock"></Downloads>
+                </div>
+                <div class="col-span-3 col-start-5 row-start-2 h-[250px]">
+                <PopularProduct :widget="mock"></PopularProduct>
+                </div>
             </div>
-            <div class="col-span-2 row-start-2 h-[250px]">
-              <MoreProducts :widget="mock"></MoreProducts>
-            </div>
-            <div class="col-span-2 col-start-3 row-start-2 h-[250px]">
-              <Downloads :widget="mock"></Downloads>
-            </div>
-            <div class="col-span-3 col-start-5 row-start-2 h-[250px]">
-              <PopularProduct :widget="mock"></PopularProduct>
-            </div>
-          </div>
         </div>
-  
+
         <div class="col-start-5">
-          <div class="grid h-full grid-cols-1 grid-rows-[100px_1fr_1fr] gap-4">
-            <div>
-              <PopularColors :widget="mock"></PopularColors>
+            <div class="grid h-full grid-cols-1 grid-rows-[100px_1fr_1fr] gap-4">
+                <div>
+                <PopularColors :widget="mock"></PopularColors>
+                </div>
+                <div>
+                <PopularProduct :widget="mock"></PopularProduct>
+                </div>
+                <div>
+                <PopularProduct :widget="mock"></PopularProduct>
+                </div>
             </div>
-            <div>
-              <PopularProduct :widget="mock"></PopularProduct>
-            </div>
-            <div>
-              <PopularProduct :widget="mock"></PopularProduct>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
   </template>
   

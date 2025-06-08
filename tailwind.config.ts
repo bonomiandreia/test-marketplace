@@ -22,9 +22,8 @@ module.exports = {
         },
         colors: {},
         fontFamily: {
-            sans: [...defaultTheme.fontFamily.sans], 
-            rethink: ["'Rethink Sans'", ...defaultTheme.fontFamily.sans],
-          },
+            rethink: ['Rethink Sans', 'sans-serif'],
+        },
       },
     },
     plugins: [

@@ -2,11 +2,16 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   ssr: true,
-  devtools: { enabled: true },
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', 'nuxt-viewport'],
+  viewport: {
+    breakpoints: {
+      'sm': 640,
+      'md': 768,
+      'lg': 1024,
+      'xl': 1280,
+      '2xl': 1536,
+    },
+    fallbackBreakpoint: 'lg' 
+  },
   css: ['@/assets/scss/tailwind.scss'],
-  modules: [
-    '@nuxt/icon',
-    '@pinia/nuxt',
-    '@nuxtjs/tailwindcss',
-  ],
 })

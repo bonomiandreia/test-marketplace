@@ -22,6 +22,11 @@
 
 @layer components { 
     body {
-        font-family: 'Rethink Sans', sans-serif;
+        font-family: 'Rethink Sans', sans-serif !important;
     }
+
+    .h1-semibold {
+        @apply text-5xl text-blue-900 dark:text-blue-50 font-semibold 
+    }
+    
 }

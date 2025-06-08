@@ -30,7 +30,7 @@ module.exports = {
             bluesky100: '#98DBF8',
             bluesky200: '#62C9F4',
             bluesky300: '#56AED4',
-            blyesky400: '#33A3D3',
+            blesky400: '#33A3D3',
             bluesky500: '#1C9BD1',
             
             mindaro100: '#EFFA8E',

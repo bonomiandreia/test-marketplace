@@ -1,6 +1,8 @@
 <template>
   <div>
-    <GalleryProducts></GalleryProducts>
+    <div class="container mx-auto px-4">
+      <GalleryProducts></GalleryProducts>
+    </div>
   </div>
 </template>
 

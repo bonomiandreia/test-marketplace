@@ -27,8 +27,8 @@
                 </div>
         
                 <div :class="['absolute', mapPositionToTailwind(widget.buttonPosition)]">
-                <button class="arrow-cta py-2 px-4">
-                    <Icon name="i-ic:twotone-arrow-outward"/>
+                <button class="arrow-cta flex p-items-center justify-center">
+                    <Icon class="hover:scale-110" name="i-ic:twotone-arrow-outward"/>
                 </button>
             </div>
         </div>

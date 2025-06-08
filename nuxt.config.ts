@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   ssr: true,
   devtools: { enabled: true },
-  css: ['@/assets/scss/fonts.scss' ,'@/assets/scss/tailwind.scss'],
+  css: ['@/assets/scss/tailwind.scss'],
   modules: [
     '@nuxt/icon',
     '@pinia/nuxt',

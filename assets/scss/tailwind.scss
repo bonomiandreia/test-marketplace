@@ -28,5 +28,27 @@
     .h1-semibold {
         @apply text-5xl text-blue-900 dark:text-blue-50 font-semibold 
     }
+
+    .h3-marketplace {
+        @apply text-3xl
+    }
+
+    .h1-marketplace {
+        @apply text-1xl
+    }
+
+
+    .h2-marketplace {
+        @apply text-2xl
+    }
+
+
+    .box-marketplace {
+        @apply border rounded-lg text-center h-full bg-white
+    }
+
+    .arrow-cta {
+        @apply text-black text-3xl bg-white rounded-full
+    }
     
 }

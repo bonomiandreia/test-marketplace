@@ -1,33 +1,34 @@
 <template>
+
     <div class="grid grid-cols-1 md:grid-cols-5 gap-4 pt-[60px]">
       <div class="md:col-span-4">
         <div class="grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 gap-4">
           <div class="md:col-span-7 h-[400px] md:h-[500px]">
-            <MainProduct :widget="mock"></MainProduct>
+            <MainProduct :widget="mock" />
           </div>
           <div class="md:col-span-2 md:row-start-2 h-[250px]">
-            <MoreProducts :widget="mock"></MoreProducts>
+            <MoreProducts :widget="mock" />
           </div>
           <div class="md:col-span-2 md:col-start-3 md:row-start-2 h-[250px]">
-            <Downloads :widget="mock"></Downloads>
+            <Downloads :widget="mock" />
           </div>
           <div class="md:col-span-3 md:col-start-5 md:row-start-2 h-[250px]">
-            <PopularProduct :widget="mock"></PopularProduct>
+            <PopularProduct :widget="mock" />
           </div>
         </div>
       </div>
-  
       <div class="md:col-start-5">
-
-        <div class="grid grid-cols-1 gap-4 md:h-full md:grid-rows-[auto_1fr_1fr]">
+        <div class="grid grid-cols-1 gap-4 md:h-full md:grid-rows-[100px_250px_385px]">
           <div class="h-[100px]">
-            <PopularColors :widget="mock"></PopularColors>
+            <PopularColors :widget="mock" />
           </div>
+
           <div>
-            <CommonProduct :widget="mock"></CommonProduct>
+            <CommonProduct :widget="mock" />
           </div>
+
           <div>
-            <CommonProduct :widget="mock"></CommonProduct>
+            <CommonProduct :widget="mock" />
           </div>
         </div>
       </div>

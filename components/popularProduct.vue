@@ -11,7 +11,7 @@
                 mapPositionToGradientClass(widget.titlePosition)
                 ]"
             >
-                <h3 :class="['absolute', 'z-2', 'text-bold', 'text-5xl', 'font-rethink', mapPositionToTailwind(widget.titlePosition)]">
+                <h3 :class="['absolute', 'z-2', 'h2-marketplace', mapPositionToTailwind(widget.titlePosition)]">
                     {{ widget.title }}
                 </h3>
         
@@ -27,7 +27,7 @@
                 </div>
         
                 <div :class="['absolute', mapPositionToTailwind(widget.buttonPosition)]">
-                <button class="text-black py-2 px-4 text-5xl bg-white rounded-full">
+                <button class="arrow-cta py-2 px-4">
                     <Icon name="i-ic:twotone-arrow-outward"/>
                 </button>
             </div>

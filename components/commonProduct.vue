@@ -1,9 +1,9 @@
 <template>
-    <div class="border rounded-lg text-center relative">
+    <div class="border rounded-lg text-center relative h-full">
   
-      <div class="grid overflow-hidden">
+      <div class="grid overflow-hidden h-full">
   
-        <img :src="widget.imageSrc" class="w-full h-auto object-cover rounded z-0" />
+        <img :src="widget.imageSrc" class="w-full h-full object-cover rounded z-0" />
             <div
                 v-if="widget.isGradient"
                 :class="[
@@ -11,7 +11,7 @@
                 mapPositionToGradientClass(widget.titlePosition)
                 ]"
             >
-                <h3 :class="['absolute', 'z-2', 'text-bold', 'text-5xl', mapPositionToTailwind(widget.titlePosition)]">
+                <h3 :class="['absolute', 'z-2', 'text-bold', 'text-5xl', 'font-rethink', mapPositionToTailwind(widget.titlePosition)]">
                     {{ widget.title }}
                 </h3>
         

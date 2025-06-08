@@ -1,7 +1,7 @@
 <template>
     
-    <div class="w-full h-full bg-red-500">
-        downloads
+    <div class="w-full h-full bg-yellow-500">
+     Popular Colors
     </div>
     
 </template>

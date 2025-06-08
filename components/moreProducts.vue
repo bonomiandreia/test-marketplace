@@ -1,6 +1,6 @@
 <template>
     
-    <div class="w-100 h-auto bg-blue-500">
+    <div class="w-full h-full bg-blue-500">
      More products
     </div>
     

@@ -1,35 +1,36 @@
 <template>
-    <div class="grid grid-cols-5 gap-4 pt-[60px]">
-        <div class="col-span-4">
-            <div class="grid grid-cols-7 grid-rows-2 gap-4">
-                <div class="col-span-7 h-[500px]">
-                <MainProduct :widget="mock"></MainProduct>
-                </div>
-                <div class="col-span-2 row-start-2 h-[250px]">
-                <MoreProducts :widget="mock"></MoreProducts>
-                </div>
-                <div class="col-span-2 col-start-3 row-start-2 h-[250px]">
-                <Downloads :widget="mock"></Downloads>
-                </div>
-                <div class="col-span-3 col-start-5 row-start-2 h-[250px]">
-                <PopularProduct :widget="mock"></PopularProduct>
-                </div>
-            </div>
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 pt-[60px]">
+      <div class="md:col-span-4">
+        <div class="grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 gap-4">
+          <div class="md:col-span-7 h-[400px] md:h-[500px]">
+            <MainProduct :widget="mock"></MainProduct>
+          </div>
+          <div class="md:col-span-2 md:row-start-2 h-[250px]">
+            <MoreProducts :widget="mock"></MoreProducts>
+          </div>
+          <div class="md:col-span-2 md:col-start-3 md:row-start-2 h-[250px]">
+            <Downloads :widget="mock"></Downloads>
+          </div>
+          <div class="md:col-span-3 md:col-start-5 md:row-start-2 h-[250px]">
+            <PopularProduct :widget="mock"></PopularProduct>
+          </div>
         </div>
+      </div>
+  
+      <div class="md:col-start-5">
 
-        <div class="col-start-5">
-            <div class="grid h-full grid-cols-1 grid-rows-[100px_1fr_1fr] gap-4">
-                <div>
-                <PopularColors :widget="mock"></PopularColors>
-                </div>
-                <div>
-                <PopularProduct :widget="mock"></PopularProduct>
-                </div>
-                <div>
-                <PopularProduct :widget="mock"></PopularProduct>
-                </div>
-            </div>
+        <div class="grid grid-cols-1 gap-4 md:h-full md:grid-rows-[auto_1fr_1fr]">
+          <div class="h-[100px]">
+            <PopularColors :widget="mock"></PopularColors>
+          </div>
+          <div>
+            <CommonProduct :widget="mock"></CommonProduct>
+          </div>
+          <div>
+            <CommonProduct :widget="mock"></CommonProduct>
+          </div>
         </div>
+      </div>
     </div>
   </template>
   

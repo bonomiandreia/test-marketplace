@@ -11,7 +11,7 @@
                 mapPositionToGradientClass(widget.titlePosition)
                 ]"
             >
-                <h3 :class="['absolute', 'z-2', 'text-bold', 'text-5xl', 'font-rethink', mapPositionToTailwind(widget.titlePosition)]">
+                <h3 :class="['absolute', 'z-2', 'text-bold', 'text-5xl', mapPositionToTailwind(widget.titlePosition)]">
                     {{ widget.title }}
                 </h3>
         

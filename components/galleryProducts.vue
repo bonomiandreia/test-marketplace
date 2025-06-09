@@ -1,26 +1,29 @@
 <template>
 
     <div v-if="mock">
-        <div class="grid grid-cols-1 md:grid-cols-5 gap-4 pt-[60px]">
-            <div class="md:col-span-4">
-                <div class="grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 gap-4">
-                <div class="md:col-span-7 main-product-gallery">
-                    <MainProduct :widget="mockMain" />
-                </div>
-                <div class="md:col-span-2 md:row-start-2 h-[250px]">
-                    <MoreProducts :widget="mock" />
-                </div>
-                <div class="md:col-span-2 md:col-start-3 md:row-start-2 h-[250px]">
-                    <Downloads :widget="mock" />
-                </div>
-                <div class="md:col-span-3 md:col-start-5 md:row-start-2 h-[250px]">
-                    <PopularProduct :widget="mockPopular" />
-                </div>
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 pt-[60px]">
+            <div class="lg:col-span-4">
+                <div class="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-4">
+                    <div class="lg:col-span-7 main-product-gallery">
+                        <MainProduct :widget="mockMain" />
+                    </div>
+                    <div class="h-[100px]" v-if="$viewport.isLessThan('lg')">
+                        <PopularColors :widget="mock" />
+                    </div>
+                    <div class="lg:col-span-2 lg:row-start-2 h-[250px]">
+                        <MoreProducts :widget="mock" />
+                    </div>
+                    <div class="lg:col-span-2 lg:col-start-3 lg:row-start-2 h-[250px]">
+                        <Downloads :widget="mock" />
+                    </div>
+                    <div class="lg:col-span-3 lg:col-start-5 lg:row-start-2 h-[250px]" >
+                        <PopularProduct :widget="mockPopular" />
+                    </div>
                 </div>
             </div>
-            <div class="md:col-start-5">
-                <div class="grid grid-cols-1 gap-4 md:h-full md:grid-rows-[100px_150px_380px]">
-                    <div class="h-[100px]">
+            <div class="lg:col-start-5">
+                <div class="grid grid-cols-1 gap-4 lg:h-full lg:grid-rows-[100px_150px_380px]">
+                    <div class="h-[100px]"  v-if="$viewport.isGreaterThan('lg')">
                         <PopularColors :widget="mock" />
                     </div>
 

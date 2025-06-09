@@ -14,7 +14,7 @@
             :aria-label="`Select ${color.name} color`"
             class="w-7 h-7 rounded-full bg-white dark:bg-gray-200 p-1 flex items-center justify-center cursor-pointer transition-all duration-200 ease-in-out hover:scale-110 focus:outline-none"
             :class="{
-            'ring-2 ring-offset-2 ring-blue500 shadow-md': selectedColor === color.value,
+            'ring-2 ring-offset-2 ring-gray-500 shadow-md': selectedColor === color.value,
             'shadow-sm hover:shadow-md': selectedColor !== color.value,
             }"
         >

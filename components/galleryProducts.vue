@@ -1,7 +1,7 @@
 <template>
 
     <div v-if="mock">
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 pt-[60px]">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 pt-[75px]">
             <div class="lg:col-span-4">
                 <div class="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-4">
                     <div class="lg:col-span-7 main-product-marketplace-gallery-marketplace">

@@ -65,7 +65,7 @@
     switch (position) {
       case 'top-left': return 'top-3 left-3 text-left';
       case 'top-right': return 'top-3 right-3 text-right';
-      case 'bottom-left': return 'bottom-3 left-5 text-right';
+      case 'bottom-left': return 'bottom-3 left-5 text-left';
       case 'bottom-right': return 'bottom-3 right-5 text-right';
       case 'top': return 'top-3 left-1/2 -translate-x-1/2';
       case 'bottom': return 'bottom-3 left-1/2 -translate-x-1/2';

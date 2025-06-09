@@ -60,10 +60,9 @@
     imageSrc: "/images/pic2.jpg",
     title: "Light Grey Superface Headphone",
     subtitle: "Boosted with bass",
-    description: "A versatile and durable backpack with multiple compartments.",
     buttonPosition: "top-left",
-    titlePosition: "top-right",
-    isGradient: false,
+    titlePosition: "bottom-left",
+    isGradient: true,
   };
 
 

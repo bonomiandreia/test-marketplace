@@ -10,9 +10,14 @@
                 mapPositionToGradientClass(widget.isGradient, widget.titlePosition)
                 ]"
             >
-                <h3 :class="['absolute', 'z-2', 'h1-marketplace', mapPositionToTailwind(widget.titlePosition)]">
-                    {{ widget.title }}
-                </h3>
+                <div :class="['absolute', 'z-2', mapPositionToTailwind(widget.titlePosition)]">
+                    <h3 class="h1-marketplace">
+                      {{ widget.title }}
+                    </h3>
+                    <span v-if="widget.subtitle" class="text-gray-500">
+                      {{ widget.subtitle }}
+                    </span>
+                </div>
         
                 <div :class="['absolute', mapPositionToTailwind(widget.buttonPosition)]">
                 <button class="arrow-cta-marketplace flex p-items-center justify-center p-1">
@@ -35,7 +40,7 @@
     switch (position) {
       case 'top-left': return 'top-3 left-3 text-left';
       case 'top-right': return 'top-3 right-3 text-right';
-      case 'bottom-left': return 'bottom-3 left-5 text-right';
+      case 'bottom-left': return 'bottom-3 left-3 text-left';
       case 'bottom-right': return 'bottom-3 right-5 text-right';
       case 'top': return 'top-3 left-1/2 -translate-x-1/2';
       case 'bottom': return 'bottom-3 left-1/2 -translate-x-1/2';

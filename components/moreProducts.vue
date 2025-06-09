@@ -7,7 +7,7 @@
         <p class="text-base text-gray-500 dark:text-gray-100">{{ widget.subtitle }}</p>
       </div>
 
-      <button class="flex h-10 w-10 p-3 items-center justify-center rounded-full bg-gray-100 transition-colors hover:bg-gray-200 dark:bg-gray-300">
+      <button class="flex h-10 w-10 p-2 items-center text-5xl justify-center rounded-full bg-gray-100 transition-colors hover:bg-gray-200 dark:bg-gray-300">
             <Icon name="i-fluent-color:heart-48"/>
       </button>
     </div>

@@ -72,11 +72,11 @@
     }
 
     .slide-marketplace {
-        @apply bg-white shadow-lg rounded-full text-lg
+        @apply bg-white shadow-lg rounded-full text-lg dark:bg-gray-700
     }
 
     .arrow-marketplace {
-        @apply cursor-pointer select-none text-lg text-gray-800 transition-all duration-200 hover:scale-125
+        @apply cursor-pointer select-none text-lg text-gray-800 dark:text-gray-50 transition-all duration-200 hover:scale-125
     }
 
     .button-mindaro-marketplace {

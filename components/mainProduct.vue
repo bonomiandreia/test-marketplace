@@ -79,6 +79,25 @@
         class="arrow-marketplace"
       />
     </div>
+    
+
+    <div class="absolute bottom-5 left-3 sm:left-6 flex items-center gap-x-3 z-10">
+      <span class="text-sm text-gray-500 dark:text-gray-50" v-if="$viewport.isGreaterThan('md')">Follow us on:</span>
+      <div class="flex items-center gap-x-2 sm:gap-x-3">
+        <a href="#" aria-label="Twitter" class="flex items-center justify-center w-8 h-8 bg-gray-100/80 dark:bg-gray-700/80 rounded-full transition-transform hover:scale-110">
+          <Icon name="i-mdi:twitter" class="text-gray-700 dark:text-gray-200" />
+        </a>
+        <a href="#" aria-label="TikTok" class="flex items-center justify-center w-8 h-8 bg-gray-100/80 dark:bg-gray-700/80 rounded-full transition-transform hover:scale-110">
+          <Icon name="i-ic:baseline-tiktok" class="text-gray-700 dark:text-gray-200" />
+        </a>
+        <a href="#" aria-label="Instagram" class="flex items-center justify-center w-8 h-8 bg-gray-100/80 dark:bg-gray-700/80 rounded-full transition-transform hover:scale-110">
+          <Icon name="i-mdi:instagram" class="text-gray-700 dark:text-gray-200" />
+        </a>
+        <a href="#" aria-label="LinkedIn" class="flex items-center justify-center w-8 h-8 bg-gray-100/80 dark:bg-gray-700/80 rounded-full transition-transform hover:scale-110">
+          <Icon name="i-mdi:linkedin" class="text-gray-700 dark:text-gray-200" />
+        </a>
+      </div>
+    </div>
 
 </div>
 

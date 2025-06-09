@@ -11,7 +11,7 @@
                         <PopularColors :widget="mock" />
                     </div>
                     <div class="lg:col-span-2 lg:row-start-2 h-[250px]">
-                        <MoreProducts :widget="mockMain" />
+                        <MoreProducts :widget="mockMoreProducts" />
                     </div>
                     <div class="lg:col-span-2 lg:col-start-3 lg:row-start-2 h-[250px]">
                         <Downloads :widget="mockDownloads" />
@@ -87,6 +87,32 @@
     title: "Sequoia Inspiring Musico",
     subtitle: "Clear Sounds",
     description: "Making your dream music come true stay with Sequios Sounds!",
+    name: 'Sequoia Inspiring Musico',
+    about: 'Airpods by Sequoia.',
+    isPopular: false,
+    rating: 4.8,
+    buttonPosition: "bottom-left",
+    titlePosition: "top-left",
+    isGradient: false,
+    imagesUsers: {
+        images: [
+            "/images/miband/miband.webp",
+            "/images/miband/image1.jpg",
+            "/images/miband/user2.webp"
+        ]
+    }
+  };
+
+
+
+  const mockMoreProducts = {
+    type: "mainProduct",
+    id: 201,
+    imageSrc: "/images/airpodsMax/airpodmax-white.png",
+    title: "Sequoia Inspiring Musico",
+    subtitle: "Clear Sounds",
+    description: "Making your dream music come true stay with Sequios Sounds!",
+    name: 'Sequoia Inspiring Musico',
     isPopular: false,
     rating: 4.8,
     buttonPosition: "bottom-left",

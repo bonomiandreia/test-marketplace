@@ -3,7 +3,7 @@
     <div class="w-full h-full box-marketplace p-3">
         <div class="flex justify-between items-start mb-4">
       <div>
-        <h2 class="text-2xl font-bold text-black dark:text-gray-50">{{ widget.title }}</h2>
+        <h2 class="text-2xl text-black dark:text-gray-50">{{ widget.title }}</h2>
         <p class="text-base text-gray-500 dark:text-gray-100">{{ widget.subtitle }}</p>
       </div>
 

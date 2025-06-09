@@ -2,6 +2,19 @@
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Stack
+
+Nuxt/vue - Tailwind 
+
+Tailwind: For a intuitive Design system and a centralized color pallete 
+Nuxt: The nuxt arcteture is a consolided for organization 
+
+
+Tailwind.scss: it used to contains global components with potential to be used in other components 
+components/icons: all the svgs should be in this folder to dark mode works in svg icons too 
+webp: all images are in webp for a better otimization 
+@nuxt/icon: is a library to access a many icons (https://icones.js.org/collection/all)
+
 ## Setup
 
 Make sure to install dependencies:
@@ -73,3 +86,6 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+

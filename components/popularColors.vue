@@ -12,7 +12,7 @@
             @click="handleColorSelect(color.value)"
             :title="color.name"
             :aria-label="`Select ${color.name} color`"
-            class="w-[30px] h-[30px] min-h-[30px] min-w-[30px] rounded-full bg-white dark:bg-gray-200 p-1 flex items-center justify-center cursor-pointer transition-all duration-200 ease-in-out hover:scale-110 focus:outline-none"
+            class="w-[30px] h-[30px] min-h-[30px] min-w-[30px]  bg-white dark:bg-gray-200 p-1 flex items-center button-colors-marketplace"
             :class="{
             'ring-2 ring-offset-2 ring-gray-500 shadow-md': selectedColor === color.value,
             'shadow-sm hover:shadow-md': selectedColor !== color.value,

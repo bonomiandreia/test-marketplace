@@ -4,7 +4,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 pt-[60px]">
             <div class="lg:col-span-4">
                 <div class="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-4">
-                    <div class="lg:col-span-7 main-product-gallery">
+                    <div class="lg:col-span-7 main-product-marketplace-gallery-marketplace">
                         <MainProduct :widget="mockMain" />
                     </div>
                     <div class="h-[100px]" v-if="$viewport.isLessThan('lg')">
@@ -14,7 +14,7 @@
                         <MoreProducts :widget="mock" />
                     </div>
                     <div class="lg:col-span-2 lg:col-start-3 lg:row-start-2 h-[250px]">
-                        <Downloads :widget="mock" />
+                        <Downloads :widget="mockDownloads" />
                     </div>
                     <div class="lg:col-span-3 lg:col-start-5 lg:row-start-2 h-[250px]" >
                         <PopularProduct :widget="mockPopular" />
@@ -81,6 +81,27 @@
 
   const mockMain = {
     type: "mainProduct",
+    id: 201,
+    imageSrc: "/images/airpodsMax/airpodmax-white.png",
+    title: "Sequoia Inspiring Musico",
+    subtitle: "Clear Sounds",
+    description: "Making your dream music come true stay with Sequios Sounds!",
+    isPopular: false,
+    rating: 4.8,
+    buttonPosition: "bottom-left",
+    titlePosition: "top-left",
+    isGradient: false,
+    imagesUsers: {
+        images: [
+            "/images/miband/miband.webp",
+            "/images/miband/image1.jpg",
+            "/images/miband/user2.webp"
+        ]
+    }
+  };
+
+  const mockDownloads = {
+    type: "downloads",
     id: 201,
     imageSrc: "/images/airpodsMax/airpodmax-white.png",
     title: "Sequoia Inspiring Musico",

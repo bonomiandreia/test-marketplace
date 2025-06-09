@@ -15,7 +15,7 @@
                 </h3>
         
                 <div :class="['absolute', mapPositionToTailwind(widget.buttonPosition)]">
-                <button class="arrow-cta flex p-items-center justify-center p-1">
+                <button class="arrow-cta-marketplace flex p-items-center justify-center p-1">
                     <Icon class="hover:scale-110"  name="i-ic:twotone-arrow-outward"/>
                 </button>
             </div>

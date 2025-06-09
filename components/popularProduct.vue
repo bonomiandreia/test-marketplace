@@ -4,18 +4,13 @@
       <div class="grid overflow-hidden h-full">
   
         <img :src="widget.imageSrc" class="w-full h-full object-cover rounded-3xl z-0" />
-            <div
-                v-if="widget.isGradient"
-                :class="[
+        <div
+            :class="[
                 'absolute', 'inset-0', 'z-1', 'rounded-3xl',
-                mapPositionToGradientClass(widget.titlePosition)
-                ]"
-            >
-                <h3 :class="['absolute', 'z-2', 'h2-marketplace', mapPositionToTailwind(widget.titlePosition)]">
-                    {{ widget.title }}
-                </h3>
-        
-                <div v-if="widget.isPopular" 
+                mapPositionToGradientClass( widget.isGradient, widget.titlePosition)
+            ]"
+        >
+            <div v-if="widget.isPopular" 
                 :class="[
                     'absolute','z-2', 'border', 'border-gray-500', 'text-gray-500', 
                     'rounded-2xl', 'p-2', 
@@ -24,57 +19,37 @@
                     ]">
                     <Icon name="i-fluent-color:heart-48"/>
                     <span>Popular</span>
-                </div>
-        
-                    <div :class="['absolute', mapPositionToTailwind(widget.buttonPosition)]">
-                    <button class="arrow-cta flex p-items-center justify-center">
-                        <Icon class="hover:scale-110" name="i-ic:twotone-arrow-outward"/>
-                    </button>
-                </div>
-
             </div>
 
-
-            <div v-if="!widget.isGradient" class="absolute inset-0 z-1 rounded-3xl">
-                <div v-if="widget.isPopular" 
-                :class="[
-                    'absolute','z-2', 'border', 'border-gray-500', 'text-gray-500', 
-                    'rounded-2xl', 'p-2', 
-                    'flex', 'items-center', 'gap-x-1', 
-                        mapPositionToTailwind(widget.isPopularPosition)
-                    ]">
-                    <Icon name="i-fluent-color:heart-48"/>
-                    <span>Popular</span>
-                </div>
-
-                <div v-if="widget.isPopular && widget.rating" 
-                :class="[
-                    'absolute','z-2', 'border', 'border-gray-500', 'text-gray-500', 
-                    'rounded-2xl', 'p-2', 'bg-white/50',
-                    'flex', 'items-center', 'gap-x-1', 
-                        mapPositionToTailwind(widget.isRatingPosition)
-                    ]">
-                    <Icon name="i-fluent-color:star-16"/>
-                    <span>{{ widget.rating }}</span>
-                </div>
-
-                <h3 :class="['absolute', 'z-2', 'h2-marketplace', 'w-[170px]', 'text-left', mapPositionToTailwind(widget.titlePosition)]">
-                    {{ widget.title }}
-                </h3>
-
-                <div :class="['absolute', 'z-2', 'h2-marketplace', mapPositionToTailwind(widget.imagesPosition)]">
-                    <ImagesPopular
-                        :images="widget.imagesUsers.images" 
-                    />
-                </div>
-                
-        
-                <div :class="['absolute', mapPositionToTailwind(widget.buttonPosition)]">
-                    <button class="arrow-cta flex p-items-center justify-center">
-                        <Icon class="hover:scale-110" name="i-ic:twotone-arrow-outward"/>
-                    </button>
-                </div>
+            <div v-if="widget.isPopular && widget.rating" 
+            :class="[
+                'absolute','z-2', 'border', 'border-gray-500', 'text-gray-500', 
+                'rounded-2xl', 'p-2', 'bg-white/50',
+                'flex', 'items-center', 'gap-x-1', 
+                    mapPositionToTailwind(widget.isRatingPosition)
+                ]">
+                <Icon name="i-fluent-color:star-16"/>
+                <span>{{ widget.rating }} {{                 mapPositionToGradientClass(widget.titlePosition, widget.isGradient) }}</span>
             </div>
+
+            <h3 :class="['absolute', 'z-2', 'h2-marketplace', 'w-[170px]', 'text-left', mapPositionToTailwind(widget.titlePosition)]">
+                {{ widget.title }}
+            </h3>
+
+            <div :class="['absolute', 'z-2', 'h2-marketplace', mapPositionToTailwind(widget.imagesPosition)]">
+                <ImagesPopular
+                    :images="widget.imagesUsers.images" 
+                />
+            </div>
+            
+    
+            <div :class="['absolute', mapPositionToTailwind(widget.buttonPosition)]">
+                <button class="arrow-cta flex p-items-center justify-center">
+                    <Icon class="hover:scale-110" name="i-ic:twotone-arrow-outward"/>
+                </button>
+            </div>
+
+        </div>
       </div>
     </div>
 
@@ -103,8 +78,8 @@
     }
   };
 
-    const mapPositionToGradientClass = (position?: any): string => {
-        if (!position) return '';
+    const mapPositionToGradientClass = (isGradient: boolean, position?: any, ): string => {
+        if (!position && !isGradient) return '';
         const gradientColors = 'from-transparent to-white/90';
 
         switch (position) {
@@ -115,7 +90,9 @@
             case 'top':          return `bg-gradient-to-t ${gradientColors}`;
             case 'bottom':       return `bg-gradient-to-b ${gradientColors}`;
             case 'left':         return `bg-gradient-to-l ${gradientColors}`;
-            case 'right':        return `bg-gradient-to-r ${gradientColors}`;
+            case 'right':        return `bg-gradient-to-t ${gradientColors}`;
+            case 'left-middle':  return `bg-gradient-to-l ${gradientColors}`;
+            case 'right-middle':  return `bg-gradient-to-r ${gradientColors}`;
             default: return '';
         }
     };

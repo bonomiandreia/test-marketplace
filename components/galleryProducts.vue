@@ -4,7 +4,7 @@
         <div class="grid grid-cols-1 md:grid-cols-5 gap-4 pt-[60px]">
             <div class="md:col-span-4">
                 <div class="grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 gap-4">
-                <div class="md:col-span-7 h-[400px] md:h-[500px]">
+                <div class="md:col-span-7 h-[200px] md:h-[400px]">
                     <MainProduct :widget="mock" />
                 </div>
                 <div class="md:col-span-2 md:row-start-2 h-[250px]">
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="md:col-start-5">
-                <div class="grid grid-cols-1 gap-4 md:h-full md:grid-rows-[100px_250px_385px]">
+                <div class="grid grid-cols-1 gap-4 md:h-full md:grid-rows-[100px_150px_380px]">
                     <div class="h-[100px]">
                         <PopularColors :widget="mock" />
                     </div>
@@ -77,7 +77,7 @@
     titlePosition: "left-middle",
     isPopularPosition: "top-left",
     isRatingPosition: 'bottom-right',
-    isGradient: false,
+    isGradient: true,
     imagesPosition: 'bottom-left',
     imagesUsers: {
         images: [

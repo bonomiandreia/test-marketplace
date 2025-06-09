@@ -50,17 +50,24 @@
                 <div v-if="widget.isPopular && widget.rating" 
                 :class="[
                     'absolute','z-2', 'border', 'border-gray-500', 'text-gray-500', 
-                    'rounded-2xl', 'p-2', 
+                    'rounded-2xl', 'p-2', 'bg-white/50',
                     'flex', 'items-center', 'gap-x-1', 
                         mapPositionToTailwind(widget.isRatingPosition)
                     ]">
-                    <Icon name="i-fluent-color:heart-48"/>
+                    <Icon name="i-fluent-color:star-16"/>
                     <span>{{ widget.rating }}</span>
                 </div>
 
-                <h3 :class="['absolute', 'z-2', 'h2-marketplace', mapPositionToTailwind(widget.titlePosition)]">
+                <h3 :class="['absolute', 'z-2', 'h2-marketplace', 'w-[170px]', 'text-left', mapPositionToTailwind(widget.titlePosition)]">
                     {{ widget.title }}
                 </h3>
+
+                <div :class="['absolute', 'z-2', 'h2-marketplace', mapPositionToTailwind(widget.imagesPosition)]">
+                    <ImagesPopular
+                        :images="widget.imagesUsers.images" 
+                    />
+                </div>
+                
         
                 <div :class="['absolute', mapPositionToTailwind(widget.buttonPosition)]">
                     <button class="arrow-cta flex p-items-center justify-center">

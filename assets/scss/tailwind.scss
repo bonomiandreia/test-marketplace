@@ -25,6 +25,10 @@
         font-family: 'Rethink Sans', sans-serif !important;
     }
 
+    img {
+        box-sizing: content-box;
+    }
+
     .h1-semibold {
         @apply text-5xl text-blue-900 dark:text-blue-50 font-semibold 
     }

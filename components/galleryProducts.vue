@@ -65,10 +65,10 @@
   };
 
   const mockPopular = {
-    type: "product",
+    type: "productPopular",
     id: 201,
     imageSrc: "/images/pic4.jpg",
-    title: "Stylish Backpack",
+    title: "Listening Has been released",
     subtitle: "Perfect for daily commutes",
     description: "A versatile and durable backpack with multiple compartments.",
     isPopular: true,
@@ -78,5 +78,13 @@
     isPopularPosition: "top-left",
     isRatingPosition: 'bottom-right',
     isGradient: false,
+    imagesPosition: 'bottom-left',
+    imagesUsers: {
+        images: [
+            "/images/miband/miband.webp",
+            "/images/miband/image1.jpg",
+            "/images/miband/user2.webp"
+        ]
+    }
   };
   </script>

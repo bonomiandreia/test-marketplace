@@ -55,12 +55,20 @@
         @apply text-gray-900 md:text-3xl text-xl bg-white rounded-full dark:text-white dark:bg-gray-700
     }
 
+    .arrow-button {
+        @apply text-gray-50 md:text-3xl text-xl bg-gray-900 rounded-full
+    }
+
     .main-product-gallery {
         @apply h-[300px] md:h-[400px]
     }
 
     .main-product {
         @apply h-[300px] md:h-[420px]
+    }
+
+    .chip-marketplace {
+        @apply rounded-full flex items-center justify-center gap-x-1.5 w-[150px] bg-white dark:bg-gray-700 border border-transparent text-sm text-gray-900 transition-all shadow-sm
     }
     
 }

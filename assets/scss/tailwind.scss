@@ -38,7 +38,7 @@
     }
 
     .h1-marketplace {
-        @apply text-1xl
+        @apply text-xl
     }
 
 
@@ -52,7 +52,15 @@
     }
 
     .arrow-cta {
-        @apply text-gray-900 text-3xl bg-white rounded-full dark:text-white dark:bg-gray-700
+        @apply text-gray-900 md:text-3xl text-xl bg-white rounded-full dark:text-white dark:bg-gray-700
+    }
+
+    .main-product-gallery {
+        @apply h-[200px] md:h-[400px]
+    }
+
+    .main-product {
+        @apply h-[200px] md:h-[420px]
     }
     
 }

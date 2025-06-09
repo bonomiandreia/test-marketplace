@@ -1,6 +1,6 @@
 <template>
     
-    <div class="w-full h-full bg-gray-50 dark:bg-gray-900 rounded-3xl p-3">
+    <div class="w-full h-full box-marketplace p-3">
         <h3 class="text-lg text-gray-800 dark:text-gray-50 mb-4">
             Popular Colors
         </h3>

@@ -4,8 +4,8 @@
         <div class="grid grid-cols-1 md:grid-cols-5 gap-4 pt-[60px]">
             <div class="md:col-span-4">
                 <div class="grid grid-cols-1 md:grid-cols-7 md:grid-rows-2 gap-4">
-                <div class="md:col-span-7 h-[200px] md:h-[400px]">
-                    <MainProduct :widget="mock" />
+                <div class="md:col-span-7 main-product-gallery">
+                    <MainProduct :widget="mockMain" />
                 </div>
                 <div class="md:col-span-2 md:row-start-2 h-[250px]">
                     <MoreProducts :widget="mock" />
@@ -53,14 +53,11 @@
     type: "product",
     id: 201,
     imageSrc: "/images/pic2.jpg",
-    title: "Stylish Backpack",
-    subtitle: "Perfect for daily commutes",
+    title: "Light Grey Superface Headphone",
+    subtitle: "Boosted with bass",
     description: "A versatile and durable backpack with multiple compartments.",
-    isPopular: true,
-    rating: 4.8,
     buttonPosition: "top-left",
-    titlePosition: "bottom-right",
-    isPopularPosition: "top-right",
+    titlePosition: "bottom-left",
     isGradient: true,
   };
 
@@ -70,7 +67,7 @@
     id: 201,
     imageSrc: "/images/pic1.jpg",
     title: "New Gen X-Bud",
-    subtitle: "Perfect for daily commutes",
+    subtitle: "Perfect for daily use",
     description: "A versatile and durable backpack with multiple compartments.",
     isPopular: false,
     rating: 4.8,
@@ -78,6 +75,28 @@
     titlePosition: "top-left",
     isGradient: false,
   };
+
+  const mockMain = {
+    type: "mainProduct",
+    id: 201,
+    imageSrc: "/images/airpodsMax/airpodmax-white.png",
+    title: "Sequoia Inspiring Musico",
+    subtitle: "Perfect for daily use",
+    description: "A versatile and durable backpack with multiple compartments.",
+    isPopular: false,
+    rating: 4.8,
+    buttonPosition: "bottom-left",
+    titlePosition: "top-left",
+    isGradient: false,
+    imagesUsers: {
+        images: [
+            "/images/miband/miband.webp",
+            "/images/miband/image1.jpg",
+            "/images/miband/user2.webp"
+        ]
+    }
+  };
+
 
   const mockPopular = {
     type: "productPopular",

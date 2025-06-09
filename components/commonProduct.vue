@@ -34,14 +34,17 @@
   const mapPositionToTailwind = (position?: any): string => {
     if (!position) return '';
     switch (position) {
-      case 'top-left': return 'top-2 left-2';
-      case 'top-right': return 'top-2 right-2';
-      case 'bottom-left': return 'bottom-2 left-2';
-      case 'bottom-right': return 'bottom-2 right-2';
+      case 'top-left': return 'top-3 left-3';
+      case 'top-right': return 'top-3 right-3';
+      case 'bottom-left': return 'bottom-3 left-3';
+      case 'bottom-right': return 'bottom-3 right-3';
       case 'top': return 'top-2 left-1/2 -translate-x-1/2';
-      case 'bottom': return 'bottom-2 left-1/2 -translate-x-1/2';
-      case 'left': return 'left-2 top-1/2 -translate-y-1/2';
-      case 'right': return 'right-2 top-1/2 -translate-y-1/2';
+      case 'bottom': return 'bottom-3 left-1/2 -translate-x-1/2';
+      case 'left': return 'left-3 top-1/2 -translate-y-1/2';
+      case 'right': return 'right-3 top-1/2 -translate-y-1/2';
+      case 'left-middle': return 'left-3 top-1/2 -translate-y-1/2';
+      case 'right-middle': return 'right-3 top-1/2 -translate-y-1/2';
+      
       default: return '';
     }
   };

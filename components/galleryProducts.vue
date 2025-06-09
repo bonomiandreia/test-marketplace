@@ -74,8 +74,9 @@
     isPopular: true,
     rating: 4.8,
     buttonPosition: "top-right",
-    titlePosition: "bottom-left",
-    isPopularPosition: "bottom-right",
-    isGradient: true,
+    titlePosition: "left-middle",
+    isPopularPosition: "top-left",
+    isRatingPosition: 'bottom-right',
+    isGradient: false,
   };
   </script>

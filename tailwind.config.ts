@@ -64,10 +64,10 @@ module.exports = {
             redWine500: '#AE1E25',
 
             aquaBlue100: '#8AF2F1',
-            aquablue200: '#59F3F1',
-            aquablue300: '#40DEDB',
-            aquablue400: '#15B1CA',
-            aquablue500: '#0F8091'
+            aquaBlue200: '#59F3F1',
+            aquaBlue300: '#40DEDB',
+            aquaBlue400: '#15B1CA',
+            aquaBlue500: '#0F8091'
 
         },
         fontFamily: {

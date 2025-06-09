@@ -1,6 +1,6 @@
 <template>
     
-    <div class="w-full h-full bg-white dark:bg-gray-900 rounded p-2">
+    <div class="w-full h-full bg-gray-50 dark:bg-gray-900 rounded-3xl p-3">
         <h3 class="text-lg text-gray-800 dark:text-gray-50 mb-4">
             Popular Colors
         </h3>
@@ -12,13 +12,13 @@
             @click="handleColorSelect(color.value)"
             :title="color.name"
             :aria-label="`Select ${color.name} color`"
-            class="w-7 h-7 rounded-full bg-white p-1 flex items-center justify-center cursor-pointer transition-all duration-200 ease-in-out hover:scale-110 focus:outline-none"
+            class="w-7 h-7 rounded-full bg-white dark:bg-gray-200 p-1 flex items-center justify-center cursor-pointer transition-all duration-200 ease-in-out hover:scale-110 focus:outline-none"
             :class="{
-            'ring-2 ring-offset-2 ring-blue-500 shadow-md': selectedColor === color.value,
+            'ring-2 ring-offset-2 ring-blue500 shadow-md': selectedColor === color.value,
             'shadow-sm hover:shadow-md': selectedColor !== color.value,
             }"
         >
-            <div class="w-full h-full rounded-full" :class="color.twClass"></div>
+            <div class="w-full h-full rounded-full" :class="color.gradientClass"></div>
         </button>
         </div>
     </div>
@@ -29,11 +29,11 @@
 
 const selectedColor = ref(null);
 const popularColors = [
-  { name: 'Blue', value: 'blue-300', twClass: 'bg-blue-300' },
-  { name: 'Orange', value: 'orange-200', twClass: 'bg-orange-200' },
-  { name: 'Green', value: 'leafGreen-300', twClass: 'bg-leafGreen-300' },
-  { name: 'Red', value: 'redWine-300', twClass: 'bg-redWine-300' },
-  { name: 'Aqua', value: 'aquaBlue-300', twClass: 'bg-aquaBlue-300' },
+  { name: 'Blue', value: 'blue-300', gradientClass: 'bg-gradient-to-b from-blue100 to-blue500' },
+  { name: 'Orange', value: 'orange-200',  gradientClass: 'bg-gradient-to-b from-orange100 to-orange300' },
+  { name: 'Green', value: 'leafGreen-300', gradientClass: 'bg-gradient-to-b from-leafGreen100 to-leafGreen500' },
+  { name: 'Red', value: 'redWine-300', gradientClass: 'bg-gradient-to-b from-redWine100 to-redWine500' },
+  { name: 'Aqua', value: 'aquaBlue-300', gradientClass: 'bg-gradient-to-b from-aquaBlue100 to-aquaBlue300' },
 ];
 
 

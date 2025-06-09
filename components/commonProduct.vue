@@ -5,10 +5,9 @@
   
         <img :src="widget.imageSrc" class="w-full h-full object-cover rounded z-0" />
             <div
-                v-if="widget.isGradient"
                 :class="[
                 'absolute', 'inset-0', 'z-1', 'rounded',
-                mapPositionToGradientClass(widget.titlePosition)
+                mapPositionToGradientClass(widget.isGradient, widget.titlePosition)
                 ]"
             >
                 <h3 :class="['absolute', 'z-2', 'h2-marketplace', mapPositionToTailwind(widget.titlePosition)]">
@@ -49,20 +48,22 @@
     }
   };
 
-  const mapPositionToGradientClass = (position?: any): string => {
-  if (!position) return '';
-  const gradientColors = 'from-transparent to-white/90';
+  const mapPositionToGradientClass = (isGradient: boolean, position?: any, ): string => {
+        if (!position && !isGradient) return '';
+        const gradientColors = 'from-transparent to-white/90';
 
-  switch (position) {
-    case 'top-left':     return `bg-gradient-to-tl ${gradientColors}`;
-    case 'top-right':    return `bg-gradient-to-tr ${gradientColors}`;
-    case 'bottom-left':  return `bg-gradient-to-bl ${gradientColors}`;
-    case 'bottom-right': return `bg-gradient-to-br ${gradientColors}`;
-    case 'top':          return `bg-gradient-to-t ${gradientColors}`;
-    case 'bottom':       return `bg-gradient-to-b ${gradientColors}`;
-    case 'left':         return `bg-gradient-to-l ${gradientColors}`;
-    case 'right':        return `bg-gradient-to-r ${gradientColors}`;
-    default: return '';
-  }
-};
+        switch (position) {
+            case 'top-left':     return `bg-gradient-to-tl ${gradientColors}`;
+            case 'top-right':    return `bg-gradient-to-tr ${gradientColors}`;
+            case 'bottom-left':  return `bg-gradient-to-bl ${gradientColors}`;
+            case 'bottom-right': return `bg-gradient-to-br ${gradientColors}`;
+            case 'top':          return `bg-gradient-to-t ${gradientColors}`;
+            case 'bottom':       return `bg-gradient-to-b ${gradientColors}`;
+            case 'left':         return `bg-gradient-to-l ${gradientColors}`;
+            case 'right':        return `bg-gradient-to-t ${gradientColors}`;
+            case 'left-middle':  return `bg-gradient-to-l ${gradientColors}`;
+            case 'right-middle':  return `bg-gradient-to-r ${gradientColors}`;
+            default: return '';
+        }
+    };
   </script>

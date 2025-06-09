@@ -25,7 +25,7 @@
                     </div>
 
                     <div>
-                        <CommonProduct :widget="mock" />
+                        <CommonProduct :widget="mock2" />
                     </div>
 
                     <div>
@@ -62,6 +62,21 @@
     titlePosition: "bottom-right",
     isPopularPosition: "top-right",
     isGradient: true,
+  };
+
+
+  const mock2 = {
+    type: "product",
+    id: 201,
+    imageSrc: "/images/pic1.jpg",
+    title: "New Gen X-Bud",
+    subtitle: "Perfect for daily commutes",
+    description: "A versatile and durable backpack with multiple compartments.",
+    isPopular: false,
+    rating: 4.8,
+    buttonPosition: "bottom-left",
+    titlePosition: "top-left",
+    isGradient: false,
   };
 
   const mockPopular = {

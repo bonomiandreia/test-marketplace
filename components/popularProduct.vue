@@ -29,7 +29,7 @@
                     mapPositionToTailwind(widget.isRatingPosition)
                 ]">
                 <Icon name="i-fluent-color:star-16"/>
-                <span>{{ widget.rating }} {{                 mapPositionToGradientClass(widget.titlePosition, widget.isGradient) }}</span>
+                <span>{{ widget.rating }}</span>
             </div>
 
             <h3 :class="['absolute', 'z-2', 'h2-marketplace', 'w-[170px]', 'text-left', mapPositionToTailwind(widget.titlePosition)]">

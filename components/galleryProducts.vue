@@ -11,7 +11,7 @@
                         <PopularColors :widget="mock" />
                     </div>
                     <div class="lg:col-span-2 lg:row-start-2 h-[250px]">
-                        <MoreProducts :widget="mock" />
+                        <MoreProducts :widget="mockMain" />
                     </div>
                     <div class="lg:col-span-2 lg:col-start-3 lg:row-start-2 h-[250px]">
                         <Downloads :widget="mockDownloads" />
@@ -110,14 +110,15 @@
     description: "A versatile and durable backpack with multiple compartments.",
     isPopular: false,
     rating: 4.8,
+    
     buttonPosition: "bottom-left",
     titlePosition: "top-left",
     isGradient: false,
     imagesUsers: {
         images: [
-            "/images/miband/miband.webp",
-            "/images/miband/image1.jpg",
-            "/images/miband/user2.webp"
+            "/images/downloads/icon1.jpg",
+            "/images/downloads/icon2.jpg",
+            "/images/downloads/icon3.jpg"
         ]
     }
   };

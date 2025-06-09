@@ -11,9 +11,9 @@
             <span class="text-sm">Downloads</span>
         </div>
 
-        <div class="relative z-10 -mt-4 flex items-center gap-x-1.5 rounded-full bg-white px-3 py-1 shadow-sm">
+        <div class="relative z-10 -mt-4 flex items-center gap-x-1.5 rounded-full bg-white dark:bg-gray-900  px-3 py-1 shadow-sm">
             <span class="text-xl text-yellow-300">★</span>
-            <span class="text-sm font-medium text-gray-600">4.6 reciews</span>
+            <span class="text-sm font-medium text-gray-600 dark:text-gray-50"> {{ widget.rating}} reviews </span>
         </div>
     </div>
     

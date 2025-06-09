@@ -23,7 +23,9 @@
             </div>
             <div class="lg:col-start-5">
                 <div class="grid grid-cols-1 gap-4 lg:h-full lg:grid-rows-[100px_150px_380px]">
-                    <div class="h-[100px]"  v-if="$viewport.isGreaterThan('lg')">
+
+                    <div class="h-[100px]"  v-if="$viewport.isGreaterOrEquals('lg')">
+                        
                         <PopularColors :widget="mock" />
                     </div>
 

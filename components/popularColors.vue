@@ -4,7 +4,7 @@
         <h3 class="text-lg text-gray-800 dark:text-gray-50 mb-4">
             Popular Colors
         </h3>
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-2 md:space-x-1">
         <button
             v-for="color in popularColors"
             :key="color.name"

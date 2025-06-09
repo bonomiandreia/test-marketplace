@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       'xl': 1280,
       '2xl': 1536,
     },
-    fallbackBreakpoint: 'lg' 
+    fallbackBreakpoint: 'sm' 
   },
   css: ['@/assets/scss/tailwind.scss'],
 })

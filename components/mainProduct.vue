@@ -2,7 +2,7 @@
     
   <div class="w-full h-full box-marketplace relative">
     <div :class="['absolute', 'z-10', 'w-[50%]', 'text-left', 'left-3', 'pl-3', 'pt-5']">
-        <div class="py-0.5 pr-2.5 pl-1.5 chip-marketplace">
+        <div class="py-0.5 pr-2.5 pl-1.5 chip-marketplace dark:text-gray-50">
           <Icon 
             name="i-material-symbols:speaker"
             class="select-none text-lg chip-text-marketplace transition-all duration-200 hover:scale-125"
@@ -20,10 +20,12 @@
           </div>
           
           <div class="flex-shrink-0">
-            <img :src="arrowDotted"/>
+              <DottedArrow
+                class="w-20 text-gray-300 dark:text-gray-50 sm:w-28"
+              />
           </div>
           <div class="flex-shrink-0">
-            <h2 class="text-2xl text-zinc-800 sm:text-2xl">
+            <h2 class="text-2xl text-zinc-800 dark:text-gray-50 sm:text-2xl">
               {{ widget.subtitle }}
             </h2>
             <div class="mt-1 text-base text-gray-500 sm:text-sm w-[300px]">
@@ -83,10 +85,9 @@
 </template>
   
   <script setup lang="ts">
+  import DottedArrow from '@/components/icons/dottedArrow.vue'
   interface Props { widget: any; }
   const props = defineProps<Props>();
-  import arrowDotted from 'public/images/svgs/dotted-arrow.svg';
-
 
   const { $viewport } = useNuxtApp()
 

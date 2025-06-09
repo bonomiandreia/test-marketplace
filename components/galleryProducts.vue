@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="lg:col-start-5">
-                <div class="grid grid-cols-1 gap-4 lg:h-full lg:grid-rows-[100px_150px_380px]">
+                <div class="grid grid-cols-1 gap-4 lg:h-full lg:grid-rows-[100px_150px_405px]">
 
                     <div class="h-[100px]"  v-if="$viewport.isGreaterOrEquals('lg')">
                         
@@ -62,8 +62,8 @@
     subtitle: "Boosted with bass",
     description: "A versatile and durable backpack with multiple compartments.",
     buttonPosition: "top-left",
-    titlePosition: "bottom-left",
-    isGradient: true,
+    titlePosition: "top-right",
+    isGradient: false,
   };
 
 

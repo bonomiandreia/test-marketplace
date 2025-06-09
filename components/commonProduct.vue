@@ -1,5 +1,5 @@
 <template>
-    <div class="rounded-3xl text-center relative h-full">
+    <div class="rounded-3xl relative h-full">
   
       <div class="grid overflow-hidden h-full">
   
@@ -10,7 +10,7 @@
                 mapPositionToGradientClass(widget.isGradient, widget.titlePosition)
                 ]"
             >
-                <h3 :class="['absolute', 'z-2', 'h1-marketplace', 'text-left', mapPositionToTailwind(widget.titlePosition)]">
+                <h3 :class="['absolute', 'z-2', 'h1-marketplace', mapPositionToTailwind(widget.titlePosition)]">
                     {{ widget.title }}
                 </h3>
         
@@ -18,8 +18,8 @@
                 <button class="arrow-cta-marketplace flex p-items-center justify-center p-1">
                     <Icon class="hover:scale-110"  name="i-ic:twotone-arrow-outward"/>
                 </button>
+              </div>
             </div>
-        </div>
       </div>
     </div>
 
@@ -33,10 +33,10 @@
   const mapPositionToTailwind = (position?: any): string => {
     if (!position) return '';
     switch (position) {
-      case 'top-left': return 'top-3 left-3';
-      case 'top-right': return 'top-3 right-3';
-      case 'bottom-left': return 'bottom-3 left-3';
-      case 'bottom-right': return 'bottom-3 right-3';
+      case 'top-left': return 'top-3 left-3 text-left';
+      case 'top-right': return 'top-3 right-3 text-right';
+      case 'bottom-left': return 'bottom-3 left-5 text-right';
+      case 'bottom-right': return 'bottom-3 right-5 text-right';
       case 'top': return 'top-3 left-1/2 -translate-x-1/2';
       case 'bottom': return 'bottom-3 left-1/2 -translate-x-1/2';
       case 'left': return 'left-3 top-1/2 -translate-y-1/2';

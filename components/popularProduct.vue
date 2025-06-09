@@ -63,11 +63,11 @@
   const mapPositionToTailwind = (position?: any): string => {
     if (!position) return '';
     switch (position) {
-      case 'top-left': return 'top-3 left-3';
-      case 'top-right': return 'top-3 right-3';
-      case 'bottom-left': return 'bottom-3 left-3';
-      case 'bottom-right': return 'bottom-3 right-3';
-      case 'top': return 'top-2 left-1/2 -translate-x-1/2';
+      case 'top-left': return 'top-3 left-3 text-left';
+      case 'top-right': return 'top-3 right-3 text-right';
+      case 'bottom-left': return 'bottom-3 left-5 text-right';
+      case 'bottom-right': return 'bottom-3 right-5 text-right';
+      case 'top': return 'top-3 left-1/2 -translate-x-1/2';
       case 'bottom': return 'bottom-3 left-1/2 -translate-x-1/2';
       case 'left': return 'left-3 top-1/2 -translate-y-1/2';
       case 'right': return 'right-3 top-1/2 -translate-y-1/2';
@@ -77,6 +77,7 @@
       default: return '';
     }
   };
+
 
     const mapPositionToGradientClass = (isGradient: boolean, position?: any, ): string => {
         if (!isGradient) return '';

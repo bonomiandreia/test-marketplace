@@ -16,7 +16,7 @@
           <div class="flex items-start md:items-center gap-4 mb-4">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">{{ mockMain.name }}</h1>
             
-            <div v-if="mockMain.isPopular" class="flex-shrink-0 z-2 border border-gray-500 text-gray-500 dark:border-gray-50 dark:text-gray-100 rounded-2xl p-2 flex items-center gap-x-1">
+            <div v-if="mockMain.isPopular" class="flex-shrink-0 z-2 border border-gray-500 text-gray-500 dark:border-gray-50 dark:text-gray-50 rounded-2xl p-2 flex items-center gap-x-1">
                     <Icon name="i-fluent-color:heart-48"/>
                     <span>Popular</span>
             </div>
@@ -62,6 +62,8 @@
     isGradient: false,
   };
 
+  const userName = ref('');
+  const newCommentText = ref('');
 
   const formattedPrice = computed(() => {
     return new Intl.NumberFormat('en-US', {
@@ -73,4 +75,5 @@
 </script>
 
 <style scoped>
+  /* No custom styles needed, all handled by Tailwind CSS */
 </style>

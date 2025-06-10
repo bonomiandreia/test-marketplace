@@ -9,6 +9,11 @@ Nuxt.js: Provides a consolidated and organized application architecture (I'm usi
 
 Tailwind CSS: With a possibility of an intuitive design system, centralized color palette, and easy implementation of a dark mode feature.
 
+## Delivered
+
+- Home
+- Details/[id]
+
 ## Organization
 
 - tailwind.scss: Contains global components with high reusability (e.g., box-marketplace, button-mindaro-marketplace).
@@ -54,7 +59,7 @@ const productConfig = {
 
 ## Plus
 
-- darkMode
+- darkMode in Heart Icon
 
 ## Possible improvements
 

@@ -41,6 +41,7 @@
         </div>
         <button
           class="group inline-flex mt-5 items-center gap-4 button-mindaro-marketplace p-1 pl-2 pr-1 md:p-2 md:pl-5"
+          aria-labelledby="ViewAllProducts"
         >
           <span>
             View all products
@@ -53,7 +54,7 @@
         </div>
       </div>
       <div class="grid h-full" v-if="widget?.imageSrc">
-        <img :src="widget?.imageSrc" class="w-full  main-product-marketplace object-contain rounded-3xl z-0" />
+        <img :src="widget?.imageSrc" class="w-full  main-product-marketplace object-contain rounded-3xl z-0" :alt="`Product Image ${widget?.name}`" />
       </div>
 
       <div id="button-container" class="      

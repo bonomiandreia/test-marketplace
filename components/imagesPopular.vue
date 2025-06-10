@@ -5,6 +5,7 @@
         :src="images[0]"
         alt="Overlapping icon 1"
         class="h-10 w-10 rounded-full object-cover shadow"
+        :alt="`Product Image`"
         :class="[borderColorClass, borderThicknessClass]"
         style="z-index: 10;"
       />
@@ -12,6 +13,7 @@
         :src="images[1]"
         alt="Overlapping icon 2"
         class="h-12 w-12 rounded-full object-cover shadow-md -ml-5"
+        :alt="`Product Image`"
         :class="[borderColorClass, borderThicknessClass]"
         style="z-index: 20;"
       />
@@ -19,6 +21,7 @@
         :src="images[2]"
         alt="Overlapping icon 3"
         class="h-10 w-10 rounded-full object-cover shadow -ml-5" 
+        :alt="`Product Image`"
         :class="[borderColorClass, borderThicknessClass]"
         style="z-index: 10;"
       />

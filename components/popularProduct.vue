@@ -5,7 +5,7 @@
         </div>
       <div class="grid overflow-hidden h-full" v-if="widget">
   
-        <img v-if="widget?.imageSrc" :src="widget?.imageSrc" class="w-full h-full object-cover rounded-3xl z-0" />
+        <img v-if="widget?.imageSrc" :src="widget?.imageSrc" class="w-full h-full object-cover rounded-3xl z-0" :alt="`Product Image ${widget?.name}`"/>
         <div
             :class="[
                 'absolute', 'inset-0', 'z-1', 'rounded-3xl',
@@ -46,7 +46,7 @@
             
     
             <div :class="['absolute', mapPositionToTailwind(widget.buttonPosition)]">
-                <button class="arrow-cta-marketplace flex p-items-center justify-center p-1" @click="goDetail(widget.id)">
+                <button aria-labelledby="ViewAllProducts" class="arrow-cta-marketplace flex p-items-center justify-center p-1" @click="goDetail(widget.id)">
                     <Icon class="hover:scale-110" name="i-ic:twotone-arrow-outward"/>
                 </button>
             </div>

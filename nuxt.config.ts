@@ -14,4 +14,12 @@ export default defineNuxtConfig({
     fallbackBreakpoint: 'sm' 
   },
   css: ['@/assets/scss/tailwind.scss'],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en', 
+      },
+      title: 'Marketplace Generic',
+    }
+  }
 })

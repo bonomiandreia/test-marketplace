@@ -13,6 +13,7 @@ Tailwind CSS: With a possibility of an intuitive design system, centralized colo
 
 - Home
 - Details/[id]
+(Click in arrows to redirect for detail of product)
 
 ## Organization
 

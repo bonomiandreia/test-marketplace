@@ -1,6 +1,6 @@
 <template>
 
-    <div v-if="mock">
+    <div v-if="jsonData.length > 0">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 pt-[75px]">
             <div class="lg:col-span-4">
                 <div class="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-4">
@@ -8,7 +8,7 @@
                         <MainProduct :widget="mockMain" />
                     </div>
                     <div class="h-[100px]" v-if="$viewport.isLessThan('lg')">
-                        <PopularColors :widget="mock" />
+                        <PopularColors />
                     </div>
                     <div class="lg:col-span-2 lg:row-start-2 h-[250px]">
                         <MoreProducts :widget="mockMoreProducts" />
@@ -26,21 +26,21 @@
 
                     <div class="h-[100px]"  v-if="$viewport.isGreaterOrEquals('lg')">
                         
-                        <PopularColors :widget="mock" />
+                        <PopularColors/>
                     </div>
 
                     <div>
-                        <CommonProduct :widget="mock2" />
+                        <CommonProduct :widget="productFirst" />
                     </div>
 
                     <div>
-                        <CommonProduct :widget="mock" />
+                        <CommonProduct :widget="productSecond" />
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="flex flex-col justify-center items-center gap-4 text-center pt-[100px]" v-if="!mock">
+    <div class="flex flex-col justify-center items-center gap-4 text-center pt-[100px]" v-if="jsonData.length == 0">
         <Icon
             name="i-streamline:interface-edit-skull-1-crash-death-delete-die-error-garbage-remove-skull-trash"
             class="h-16 w-16 text-gray-400 dark:text-gray-200"
@@ -54,123 +54,15 @@
   </template>
   
   <script setup lang="ts">
-  const mock = {
-    type: "product",
-    id: 201,
-    imageSrc: "/images/pic2.jpg",
-    title: "Light Grey Superface Headphone",
-    subtitle: "Boosted with bass",
-    buttonPosition: "top-left",
-    titlePosition: "bottom-left",
-    isGradient: true,
-  };
+  import jsonData from '~/assets/data/data.json';
+
+    const mockMain = jsonData.find(p => p.type === 'mainProduct');
+    const mockMoreProducts = jsonData.find(p => p.type === 'moreProducts');
+    const mockDownloads = jsonData.find(p => p.type === 'downloads');
+    const mockPopular = jsonData.find(p => p.type === 'productPopular');
+    const commonProducts = jsonData.filter(p => p.type === 'product');
+    const productSecond = commonProducts[0];
+    const productFirst = commonProducts[1];
 
 
-  const mock2 = {
-    type: "product",
-    id: 201,
-    imageSrc: "/images/pic1.jpg",
-    title: "New Gen X-Bud",
-    subtitle: "Perfect for daily use",
-    description: "A versatile and durable backpack with multiple compartments.",
-    isPopular: false,
-    rating: 4.8,
-    buttonPosition: "bottom-left",
-    titlePosition: "top-left",
-    isGradient: false,
-  };
-
-  const mockMain = {
-    type: "mainProduct",
-    id: 201,
-    imageSrc: "/images/airpodsMax/airpodmax-white.png",
-    title: "Sequoia Inspiring Musico",
-    subtitle: "Clear Sounds",
-    description: "Making your dream music come true stay with Sequios Sounds!",
-    name: 'Sequoia Inspiring Musico',
-    about: 'Airpods by Sequoia.',
-    isPopular: false,
-    rating: 4.8,
-    buttonPosition: "bottom-left",
-    titlePosition: "top-left",
-    isGradient: false,
-    imagesUsers: {
-        images: [
-            "/images/miband/miband.webp",
-            "/images/miband/image1.jpg",
-            "/images/miband/user2.webp"
-        ]
-    }
-  };
-
-
-
-  const mockMoreProducts = {
-    type: "moreProducts",
-    id: 201,
-    imageSrc: "/images/airpodsMax/airpodmax-white.png",
-    title: "Sequoia Inspiring Musico",
-    subtitle: "Clear Sounds",
-    description: "Making your dream music come true stay with Sequios Sounds!",
-    name: 'Sequoia Inspiring Musico',
-    isPopular: false,
-    rating: 4.8,
-    buttonPosition: "bottom-left",
-    titlePosition: "top-left",
-    isGradient: false,
-    imagesUsers: {
-        images: [
-            "/images/miband/miband.webp",
-            "/images/miband/image1.jpg",
-            "/images/miband/user2.webp"
-        ]
-    }
-  };
-
-  const mockDownloads = {
-    type: "downloads",
-    id: 201,
-    imageSrc: "/images/airpodsMax/airpodmax-white.png",
-    title: "Sequoia Inspiring Musico",
-    subtitle: "Perfect for daily use",
-    description: "A versatile and durable backpack with multiple compartments.",
-    isPopular: false,
-    rating: 4.8,
-    
-    buttonPosition: "bottom-left",
-    titlePosition: "top-left",
-    isGradient: false,
-    imagesUsers: {
-        images: [
-            "/images/downloads/icon1.jpg",
-            "/images/downloads/icon2.jpg",
-            "/images/downloads/icon3.jpg"
-        ]
-    }
-  };
-
-
-  const mockPopular = {
-    type: "productPopular",
-    id: 201,
-    imageSrc: "/images/pic4.jpg",
-    title: "Listening Has been released",
-    subtitle: "Perfect for daily use",
-    description: "",
-    isPopular: true,
-    rating: 4.8,
-    buttonPosition: "top-right",
-    titlePosition: "left-middle",
-    isPopularPosition: "top-left",
-    isRatingPosition: 'bottom-right',
-    isGradient: true,
-    imagesPosition: 'bottom-left',
-    imagesUsers: {
-        images: [
-            "/images/miband/miband.webp",
-            "/images/miband/image1.jpg",
-            "/images/miband/user2.webp"
-        ]
-    }
-  };
   </script>

@@ -16,13 +16,13 @@
           <div class="flex items-start md:items-center gap-4 mb-4">
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">{{ mockMain.name }}</h1>
             
-            <div v-if="mockMain.isPopular" class="flex-shrink-0 z-2 border border-gray-500 text-gray-500 rounded-2xl p-2 flex items-center gap-x-1">
+            <div v-if="mockMain.isPopular" class="flex-shrink-0 z-2 border border-gray-500 text-gray-500 dark:border-gray-50 dark:text-gray-100 rounded-2xl p-2 flex items-center gap-x-1">
                     <Icon name="i-fluent-color:heart-48"/>
                     <span>Popular</span>
             </div>
           
           </div>
-          <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">{{ mockMain.about }}</p>
+          <p class="text-gray-600 dark:text-gray-200 leading-relaxed mb-6">{{ mockMain.about }}</p>
 
           <div class="text-4xl font-bold text-gray-800 dark:text-gray-100 pb-3">
             {{ formattedPrice }}
@@ -64,30 +64,6 @@
 
   const userName = ref('');
   const newCommentText = ref('');
-
-  // Function to handle the form submission
-  const handleSubmitComment = () => {
-    // Basic validation to prevent submitting empty comments
-    if (!newCommentText.value.trim()) {
-      alert('Please write a review before submitting.');
-      return;
-    }
-    
-    // In a real app, you would send this data to your backend API
-    const newReview = {
-      user: userName.value || 'Anonymous', // Use 'Anonymous' if name is empty
-      comment: newCommentText.value,
-      date: new Date().toISOString(),
-    };
-    
-    console.log('Submitting Review:', newReview);
-    alert('Thank you for your review! It has been submitted.');
-    
-    // Clear the form fields after submission
-    userName.value = '';
-    newCommentText.value = '';
-  };
-  // --- End of new state ---
 
   const formattedPrice = computed(() => {
     return new Intl.NumberFormat('en-US', {

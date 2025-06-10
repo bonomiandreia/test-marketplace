@@ -17,6 +17,12 @@ Nuxt: The nuxt arcteture is a consolided for organization
 
 - webp: all images are in webp for a better otimization 
 
+- pages
+-- home
+-- details
+- components 
+dumb children components and galleryProducts.vue
+
 - @nuxt/icon: is a library to access a many icons (https://icones.js.org/collection/all)
 
 ## Component commonProduct.vue reusable

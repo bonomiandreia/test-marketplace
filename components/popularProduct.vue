@@ -1,9 +1,11 @@
 <template>
-    <div class="border rounded-3xl text-center relative h-full">
+    <div class="border rounded-3xl text-center relative h-full box-marketplace">
+        <div v-if="!widget" class="w-full h-full absolute z-10 flex justify-center items-center">
+            <ErrorLoad/>
+        </div>
+      <div class="grid overflow-hidden h-full" v-if="widget">
   
-      <div class="grid overflow-hidden h-full">
-  
-        <img :src="widget.imageSrc" class="w-full h-full object-cover rounded-3xl z-0" />
+        <img v-if="widget?.imageSrc" :src="widget?.imageSrc" class="w-full h-full object-cover rounded-3xl z-0" />
         <div
             :class="[
                 'absolute', 'inset-0', 'z-1', 'rounded-3xl',

@@ -14,13 +14,36 @@
       "id": 202,
       "imageSrc": "/images/pic1.jpg",
       "title": "New Gen X-Bud",
-      "subtitle": "Perfect for daily use",
+
       "description": "A versatile and durable backpack with multiple compartments.",
       "isPopular": false,
       "rating": 4.8,
       "buttonPosition": "bottom-left",
       "titlePosition": "top-left",
       "isGradient": false
+    },
+    {
+      "type": "mainProduct",
+      "id": 203,
+      "imageSrc": "/images/airpodsMax/airpodmax-white.png",
+      "title": "Sequoia Inspiring Musico",
+      "subtitle": "Clear Sounds",
+      "description": "Making your dream music come true stay with Sequios Sounds!",
+      "name": "Sequoia Inspiring Musico",
+      "about": "Airpods by Sequoia. Proin sed scelerisque ipsum. Vestibulum nunc mauris, cursus eget dolor sit amet, laoreet viverra purus. Donec sit amet mi sagittis massa volutpat mollis at id lectus. Maecenas sagittis erat eget tempor placerat. Phasellus turpis dui, condimentum in viverra a, molestie non purus. Proin pellentesque eu massa in accumsan. Nulla facilisi",
+      "isPopular": false,
+      "price": 99,
+      "rating": 4.8,
+      "buttonPosition": "bottom-left",
+      "titlePosition": "top-left",
+      "isGradient": false,
+      "imagesUsers": {
+        "images": [
+          "/images/miband/miband.webp",
+          "/images/miband/image1.jpg",
+          "/images/miband/user2.webp"
+        ]
+      }
     },
     {
       "type": "moreProducts",

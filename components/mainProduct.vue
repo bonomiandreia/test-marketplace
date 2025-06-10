@@ -1,8 +1,8 @@
 <template>
     
   <div class="w-full h-full box-marketplace relative">
-    <div v-if="!widget">
-        <ErrorLoad/>
+    <div v-if="!widget" class="w-full h-full absolute z-10 flex justify-center items-center">
+      <ErrorLoad/>
     </div>
     <div v-else="widget">
         <div :class="['absolute', 'z-10', 'w-[50%]', 'text-left', 'left-3', 'pl-3', 'pt-5']">

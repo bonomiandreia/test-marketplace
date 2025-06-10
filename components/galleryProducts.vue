@@ -73,10 +73,10 @@
         lazy: true
     });
 
-    const mockMain = computed(() => products.value?.find(p => p.type === 'mainProduct')) as any as Product;
-    const mockMoreProducts = computed(() => products.value?.find(p => p.type === 'moreProducts')) as any as Product;
-    const mockDownloads = computed(() => products.value?.find(p => p.type === 'downloads')) as any as Product;
-    const mockPopular = computed(() => products.value?.find(p => p.type === 'productPopular')) as any as Product;
+    const mockMain = computed(() => products.value?.find(p => p.type === 'mainProduct') || null) as any as Product;
+    const mockMoreProducts = computed(() => products.value?.find(p => p.type === 'moreProducts') || null) as any as Product;
+    const mockDownloads = computed(() => products.value?.find(p => p.type === 'downloads') || null) as any as Product;
+    const mockPopular = computed(() => products.value?.find(p => p.type === 'productPopular') || null) as any as Product;
 
     const commonProducts = computed(() => products.value?.filter(p => p.type === 'product') || []) 
     const productFirst = computed(() => commonProducts.value[1]); 

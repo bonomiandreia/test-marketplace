@@ -34,7 +34,7 @@
                 <span>{{ widget.rating }}</span>
             </div>
 
-            <h3 :class="['absolute', 'z-2', 'h2-marketplace', 'w-[170px]', 'text-left', mapPositionToTailwind(widget.titlePosition)]">
+            <h3 :class="['absolute', 'z-2', 'h2-marketplace', 'w-[170px]', 'text-left', 'cursor-pointer', mapPositionToTailwind(widget.titlePosition)]">
                 {{ widget.title }}
             </h3>
 
@@ -46,7 +46,7 @@
             
     
             <div :class="['absolute', mapPositionToTailwind(widget.buttonPosition)]">
-                <button class="arrow-cta-marketplace flex p-items-center justify-center p-1">
+                <button class="arrow-cta-marketplace flex p-items-center justify-center p-1" @click="goDetail(widget.id)">
                     <Icon class="hover:scale-110" name="i-ic:twotone-arrow-outward"/>
                 </button>
             </div>
@@ -62,6 +62,14 @@
     import type { Product } from '~/types/products.ts';
   interface Props { widget: Product; }
   const props = defineProps<Props>();
+
+
+  const router = useRouter();
+  
+  const goDetail = (id: any) => {
+    router.push(`/details/${id}`);
+  };
+  
 
   const mapPositionToTailwind = (position?: any): string => {
     if (!position) return '';

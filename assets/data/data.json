@@ -2,7 +2,7 @@
     {
       "type": "product",
       "id": 201,
-      "imageSrc": "/images/pic2.jpg",
+      "imageSrc": "/images/pic2.webp",
       "title": "Light Grey Superface Headphone",
       "name": "Superface Headphone",
       "price": 85,
@@ -16,7 +16,7 @@
     {
       "type": "product",
       "id": 202,
-      "imageSrc": "/images/pic1.jpg",
+      "imageSrc": "/images/pic1.webp",
       "title": "New Gen X-Bud",
       "name": "Gen X-Bud",
       "about": "Gen X-Bud by Apple. Proin sed scelerisque ipsum. Vestibulum nunc mauris, cursus eget dolor sit amet, laoreet viverra purus. Donec sit amet mi sagittis massa volutpat mollis at id lectus. Maecenas sagittis erat eget tempor placerat. Phasellus turpis dui, condimentum in viverra a, molestie non purus. Proin pellentesque eu massa in accumsan. Nulla facilisi",
@@ -31,7 +31,7 @@
     {
       "type": "mainProduct",
       "id": 203,
-      "imageSrc": "/images/airpodsMax/airpodmax-white.png",
+      "imageSrc": "/images/airpodsMax/airpodmax-white.webp",
       "title": "Sequoia Inspiring Musico",
       "subtitle": "Clear Sounds",
       "description": "Making your dream music come true stay with Sequios Sounds!",
@@ -46,7 +46,7 @@
       "imagesUsers": {
         "images": [
           "/images/miband/miband.webp",
-          "/images/miband/image1.jpg",
+          "/images/miband/image1.webp",
           "/images/miband/user2.webp"
         ]
       }
@@ -54,7 +54,7 @@
     {
       "type": "moreProducts",
       "id": 204,
-      "imageSrc": "/images/airpodsMax/airpodmax-white.png",
+      "imageSrc": "/images/airpodsMax/airpodmax-white.webp",
       "title": "More products",
       "subtitle": "450+ items",
       "description": "Making your dream music come true stay with Sequios Sounds!",
@@ -67,7 +67,7 @@
       "imagesUsers": {
         "images": [
           "/images/miband/miband.webp",
-          "/images/miband/image1.jpg",
+          "/images/miband/image1.webp",
           "/images/miband/user2.webp"
         ]
       }
@@ -75,7 +75,7 @@
     {
       "type": "downloads",
       "id": 205,
-      "imageSrc": "/images/airpodsMax/airpodmax-white.png",
+      "imageSrc": "/images/airpodsMax/airpodmax-white.webp",
       "title": "Sequoia Inspiring Musico",
       "subtitle": "Perfect for daily use",
       "description": "A versatile and durable backpack with multiple compartments.",
@@ -86,16 +86,16 @@
       "isGradient": false,
       "imagesUsers": {
         "images": [
-          "/images/downloads/icon1.jpg",
-          "/images/downloads/icon2.jpg",
-          "/images/downloads/icon3.jpg"
+          "/images/downloads/icon1.webp",
+          "/images/downloads/icon2.webp",
+          "/images/downloads/icon3.webp"
         ]
       }
     },
     {
       "type": "productPopular",
       "id": 206,
-      "imageSrc": "/images/pic4.jpg",
+      "imageSrc": "/images/pic4.webp",
       "title": "Listening Has been released",
       "subtitle": "Perfect for daily use",
       "description": "",
@@ -113,7 +113,7 @@
       "imagesUsers": {
         "images": [
           "/images/miband/miband.webp",
-          "/images/miband/image1.jpg",
+          "/images/miband/image1.webp",
           "/images/miband/user2.webp"
         ]
       }

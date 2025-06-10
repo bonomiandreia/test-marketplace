@@ -3,7 +3,7 @@
   <header class="w-full bg-gray-100 dark:bg-gray-900 fixed h-[70px] rounded-full z-40">
     <div class="flex items-center w-full max-w-7xl mx-auto h-[60px] bg-gray-200/60 dark:bg-gray-700 backdrop-blur-xl rounded-full p-3">
     
-      <div class="flex items-center flex-shrink-0 pl-4 pr-2">
+      <div class="flex items-center flex-shrink-0 pl-4 pr-2" @click="goBack">
         <Logo/>
         <span class="font-semibold text-lg text-black dark:text-white"  v-if="$viewport.isGreaterOrEquals('lg')">nitec.</span>
       </div>
@@ -45,7 +45,15 @@
     
 <script setup lang="ts">
 import Logo from '@/components/icons/logo.vue'
-import Icon1 from '@/public/images/downloads/icon1.jpg'
+import Icon1 from '@/public/images/downloads/icon1.webp'
+
+
+const router = useRouter();
+  
+const goBack = () => {
+  router.push('/home');
+};
+
 
 const toggleDarkMode = () => {
 const html = document.documentElement;

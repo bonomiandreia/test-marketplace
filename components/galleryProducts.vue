@@ -1,6 +1,6 @@
 <template>
     <div v-if="pending" class="flex flex-col justify-center items-center gap-4 text-center pt-[200px]">
-        <Icon class="text-mindaro200 text-3xl animate-spin dark:text-mindaro500" name="i-tabler:loader-2"/>
+        <Loader/>
     </div>
     <div v-else-if="products && products.length > 0">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 pt-[75px] animate-fade-up animate-once">
@@ -65,15 +65,9 @@
   
   <script setup lang="ts">
   import type { Product, Products } from '~/types/products.ts';
-    const { data: products, pending, error, execute } = useFetch<Products>('/api/products', {
+    const { data: products, pending, error } = useFetch<Products>('/api/products', {
         lazy: true,
         cache: 'no-cache',
-        immediate: false 
-    });
-
-
-    onMounted(() => {
-        execute();
     });
 
     const mockMain = computed(() => products.value?.find(p => p.type === 'mainProduct') || null) as any as Product;

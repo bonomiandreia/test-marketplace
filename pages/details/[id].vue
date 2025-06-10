@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div v-if="pending" class="container mx-auto px-4 py-8 pt-[100px]">
-      <p>Loading product...</p>
+    <div v-if="pending" class="flex flex-col justify-center items-center gap-4 text-center pt-[200px]">
+      <Loader/>
     </div>
 
     <div v-else-if="product" class="container mx-auto px-4 py-8 pt-[100px]">
@@ -20,8 +20,8 @@
             <h1 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">{{ product.name }}</h1>
             
             <div v-if="product.isPopular" class="flex-shrink-0 z-2 border border-gray-500 text-gray-500 dark:border-gray-50 dark:text-gray-50 rounded-2xl p-2 flex items-center gap-x-1">
-                    <Icon name="i-fluent-color:heart-48"/>
-                    <span>Popular</span>
+                <Icon name="i-fluent-color:heart-48"/>
+                <span>Popular</span>
             </div>
           
           </div>
@@ -58,7 +58,12 @@
 
   const productId = route.params.id;
 
-  const { data: product, pending, error } = await useFetch<Product>(() => `/api/products?id=${productId}`);
+  const { data: product, pending, error, execute } = await useFetch<Product>(() => `/api/products?id=${productId}`);
+
+
+  onMounted(() => {
+      execute();
+  });
 
   if (error.value) {
     throw showError({ statusCode: 404, statusMessage: 'Product Not Found' })

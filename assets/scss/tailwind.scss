@@ -94,5 +94,9 @@
     .chip-text-marketplace {
         @apply text-gray-800 dark:text-gray-50
     }
+
+    .loader-marketplace {
+        @apply text-mindaro200 text-3xl animate-spin dark:text-mindaro500
+    }
     
 }

@@ -14,7 +14,7 @@
 
         <div class="grid grid-cols-3 gap-4">
         <div 
-            v-for="(imageSrc, index) in widget.imagesUsers.images" 
+            v-for="(imageSrc, index) in widget.imagesUsers?.images" 
             :key="index" 
             class="aspect-square overflow-hidden rounded-2xl bg-gray-50"
         >
@@ -26,7 +26,8 @@
 </template>
       
 <script setup lang="ts">
-    interface Props { widget: any; }
+    import type { Product } from '~/types/products.ts';
+    interface Props { widget: Product; }
     const props = defineProps<Props>();
 
 </script>

@@ -3,7 +3,7 @@
     <div class="w-full h-full box-marketplace flex flex-col items-center justify-center pt-4">
         <div class="z-10">
             <ImagesPopular
-                :images="widget.imagesUsers.images" 
+                :images="widget.imagesUsers?.images" 
             />
         </div>
         <div class="relative -mt-5 flex h-36 w-36 flex-col items-center justify-center rounded-full bg-gradient-to-b from-blue100 to-blue500 text-white">
@@ -20,7 +20,8 @@
 </template>
       
 <script setup lang="ts">
-    interface Props { widget: any; }
+    import type { Product } from '~/types/products.ts';
+    interface Props { widget: Product; }
     const props = defineProps<Props>();
 
 </script>

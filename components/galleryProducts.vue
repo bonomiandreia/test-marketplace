@@ -55,14 +55,15 @@
   
   <script setup lang="ts">
   import jsonData from '~/assets/data/data.json';
+  import type { Product } from '~/types/products.ts';
 
-    const mockMain = jsonData.find(p => p.type === 'mainProduct');
-    const mockMoreProducts = jsonData.find(p => p.type === 'moreProducts');
-    const mockDownloads = jsonData.find(p => p.type === 'downloads');
-    const mockPopular = jsonData.find(p => p.type === 'productPopular');
-    const commonProducts = jsonData.filter(p => p.type === 'product');
-    const productSecond = commonProducts[0];
-    const productFirst = commonProducts[1];
+    const mockMain = jsonData.find(p => p.type === 'mainProduct') as Product;
+    const mockMoreProducts = jsonData.find(p => p.type === 'moreProducts') as Product;
+    const mockDownloads = jsonData.find(p => p.type === 'downloads') as Product;
+    const mockPopular = jsonData.find(p => p.type === 'productPopular') as Product;
+    const commonProducts = jsonData.filter(p => p.type === 'product') as Product[];
+    const productSecond = commonProducts[0] as Product;
+    const productFirst = commonProducts[1] as Product;
 
 
   </script>

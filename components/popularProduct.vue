@@ -38,7 +38,7 @@
 
             <div :class="['absolute', 'z-2', 'h2-marketplace', mapPositionToTailwind(widget.imagesPosition)]">
                 <ImagesPopular
-                    :images="widget.imagesUsers.images" 
+                    :images="widget.imagesUsers?.images" 
                 />
             </div>
             
@@ -57,7 +57,8 @@
   </template>
   
   <script setup lang="ts">
-  interface Props { widget: any; }
+    import type { Product } from '~/types/products.ts';
+  interface Props { widget: Product; }
   const props = defineProps<Props>();
 
   const mapPositionToTailwind = (position?: any): string => {

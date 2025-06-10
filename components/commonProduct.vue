@@ -32,8 +32,9 @@
   </template>
   
   <script setup lang="ts">
-  interface Props { widget: any; }
-  const props = defineProps<Props>();
+    import type { Product } from '~/types/products.ts';
+    interface Props { widget: Product; }
+    const props = defineProps<Props>();
 
   const mapPositionToTailwind = (position?: any): string => {
     if (!position) return '';

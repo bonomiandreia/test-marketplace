@@ -105,7 +105,9 @@
   
   <script setup lang="ts">
   import DottedArrow from '@/components/icons/dottedArrow.vue'
-  interface Props { widget: any; }
+  import type { Product } from '~/types/products.ts';
+
+  interface Props { widget: Product; }
   const props = defineProps<Props>();
 
   const { $viewport } = useNuxtApp()

@@ -1,8 +1,6 @@
 <template>
     <div v-if="pending" class="flex flex-col justify-center items-center gap-4 text-center pt-[200px]">
-        <p class="inline w-8 h-8 text-gray-200 animate-spin dark:text-mindaro500">
-            <Icon class="" name="i-tabler:loader-2"/>
-        </p>
+            <Icon class="text-mindaro200 text-3xl animate-spin dark:text-mindaro500" name="i-tabler:loader-2"/>
     </div>
     <div v-else-if="products && products.length > 0">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 pt-[75px]">
@@ -54,7 +52,7 @@
         </p>
 
     </div>
-    <div class="flex flex-col justify-center items-center gap-4 text-center pt-[100px]" v-if="error">
+    <div class="flex flex-col justify-center items-center gap-4 text-center pt-[100px]" v-else-if="error">
         <Icon
             name="i-streamline:interface-edit-skull-1-crash-death-delete-die-error-garbage-remove-skull-trash"
             class="h-16 w-16 text-gray-400 dark:text-gray-200"
@@ -70,7 +68,8 @@
   <script setup lang="ts">
   import type { Product, Products } from '~/types/products.ts';
     const { data: products, pending, error } = useFetch<Products>('/api/products', {
-        lazy: true
+        lazy: true,
+        cache: 'no-cache' 
     });
 
     const mockMain = computed(() => products.value?.find(p => p.type === 'mainProduct') || null) as any as Product;

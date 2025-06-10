@@ -106,7 +106,7 @@
 
 
   const mockMoreProducts = {
-    type: "mainProduct",
+    type: "moreProducts",
     id: 201,
     imageSrc: "/images/airpodsMax/airpodmax-white.png",
     title: "Sequoia Inspiring Musico",

@@ -62,8 +62,6 @@
     isGradient: false,
   };
 
-  const userName = ref('');
-  const newCommentText = ref('');
 
   const formattedPrice = computed(() => {
     return new Intl.NumberFormat('en-US', {
@@ -75,5 +73,4 @@
 </script>
 
 <style scoped>
-  /* No custom styles needed, all handled by Tailwind CSS */
 </style>

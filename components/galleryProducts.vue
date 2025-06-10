@@ -1,9 +1,9 @@
 <template>
     <div v-if="pending" class="flex flex-col justify-center items-center gap-4 text-center pt-[200px]">
-            <Icon class="text-mindaro200 text-3xl animate-spin dark:text-mindaro500" name="i-tabler:loader-2"/>
+        <Icon class="text-mindaro200 text-3xl animate-spin dark:text-mindaro500" name="i-tabler:loader-2"/>
     </div>
     <div v-else-if="products && products.length > 0">
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 pt-[75px]">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 pt-[75px] animate-fade-up animate-once">
             <div class="lg:col-span-4">
                 <div class="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-4">
                     <div class="lg:col-span-7 main-product-marketplace-gallery-marketplace">
@@ -48,7 +48,7 @@
         />
 
         <p class="text-lg text-gray-600 dark:text-gray-50">
-            Ops! Something went wrong, please try again later.
+            Ops! nothing to show for while, sorry.
         </p>
 
     </div>
@@ -58,18 +58,22 @@
             class="h-16 w-16 text-gray-400 dark:text-gray-200"
         />
 
-        <p class="text-lg text-gray-600 dark:text-gray-50">
-            Sorry, I don't have nothing to show for while ): 
-        </p>
+        <ErrorLoad/>
 
     </div>
   </template>
   
   <script setup lang="ts">
   import type { Product, Products } from '~/types/products.ts';
-    const { data: products, pending, error } = useFetch<Products>('/api/products', {
+    const { data: products, pending, error, execute } = useFetch<Products>('/api/products', {
         lazy: true,
-        cache: 'no-cache' 
+        cache: 'no-cache',
+        immediate: false 
+    });
+
+
+    onMounted(() => {
+        execute();
     });
 
     const mockMain = computed(() => products.value?.find(p => p.type === 'mainProduct') || null) as any as Product;

@@ -10,6 +10,7 @@ Tailwind: For a intuitive Design system and a centralized color pallete
 
 Nuxt: The nuxt arcteture is a consolided for organization 
 
+Dark-mode feature
 
 - Tailwind.scss: it used to contains global components with potential to be used in other components (box-marketplace, button-mindaro-marketplace)
 
@@ -22,6 +23,7 @@ Nuxt: The nuxt arcteture is a consolided for organization
 -- details
 - components 
 dumb children components and galleryProducts.vue
+
 
 - @nuxt/icon: is a library to access a many icons (https://icones.js.org/collection/all)
 

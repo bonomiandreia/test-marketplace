@@ -1,6 +1,8 @@
 
 # Project Overview
 
+URL: https://aquamarine-biscochitos-35ed0d.netlify.app/home
+
 Stack by Nuxt.js and Tailwind CSS, emphasizing a organized architecture and a consistent design system.
 
 Nuxt.js: Provides a consolidated and organized application architecture (I'm using the architecture suggested by Nuxt)

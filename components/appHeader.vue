@@ -1,6 +1,6 @@
 <template>
     
-  <header class="w-full bg-gray-100 dark:bg-gray-900 fixed h-[70px] rounded-full z-40">
+  <header class="w-full bg-gray-100 dark:bg-gray-900 fixed h-[70px] z-40 px-2 pt-2">
     <div class="flex items-center w-full max-w-7xl mx-auto h-[60px] bg-gray-200/60 dark:bg-gray-700 backdrop-blur-xl rounded-full p-3">
     
       <div class="flex items-center flex-shrink-0 pl-4 pr-2" @click="goBack">

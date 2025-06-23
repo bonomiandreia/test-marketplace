@@ -18,14 +18,15 @@
             </div>
 
             <div class="grid grid-cols-3 gap-4">
-            <div 
-                v-for="(imageSrc, index) in widget.imagesUsers?.images" 
-                :key="index" 
-                class="aspect-square overflow-hidden rounded-2xl bg-gray-50"
-            >
-                <img :src="imageSrc" :alt="`${widget.title} preview image ${index + 1}`" class="h-full w-full object-cover">
+                <img
+                    v-for="(imageSrc, index) in widget.imagesUsers?.images"
+                    :key="index"
+                    :src="imageSrc"
+                    :alt="`${widget.title} preview image ${index + 1}`"
+                    class="aspect-square w-full rounded-2xl object-cover bg-gray-50 max-h-[150px]"
+                />
             </div>
-            </div>
+
         </div>
     </div>
     
